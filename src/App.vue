@@ -12,7 +12,7 @@
             <div class="container">
 <pre>&#60;template>
     &#60;div style="height 300px">
-        &#60;google-map @ready="mapReady" :lat="59.9139" :lng="10.7522">&#60;/google-map>
+        &#60;google-map @ready="mapReady" :center-marker="false" :lat="59.9139" :lng="10.7522">&#60;/google-map>
     &#60;/div>
 &#60;/template>
 &#60;script>
@@ -35,7 +35,7 @@ export default {
             </div>
         </section>
         <div id="map">
-            <google-map :lat="59.9139" :lng="10.7522"></google-map>
+            <google-map :center-marker="false" :lat="59.9139" :lng="10.7522"></google-map>
         </div>
     </div>
 </template>

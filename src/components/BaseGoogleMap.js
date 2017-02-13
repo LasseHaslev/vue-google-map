@@ -29,7 +29,12 @@ export default {
         zoom: {
             type: Number,
             default: 8,
-        }
+        },
+
+        'center-marker': {
+            type: Boolean,
+            default: false,
+        },
 
     },
 
@@ -82,11 +87,26 @@ export default {
 
                 self.$set( self, 'map', map );
 
+                if ( self.centerMarker ) {
+                    self.setCenterMarker();
+                }
+
                 google.maps.event.addDomListener( window, 'resize', function() {
                     self.setMapCenter();
                 } );
 
             });
+        },
+        setCenterMarker() {
+            var self = this;
+            var marker = new this.google.maps.Marker({
+                map: self.map,
+
+                position: {
+                    lat: this.lat,
+                    lng: this.lng
+                }
+            })
         },
         setMapCenter() {
             this.map.setCenter( { lat: this.lat, lng: this.lng } );
