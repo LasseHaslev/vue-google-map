@@ -1,7 +1,7 @@
 {
   "name": "@lassehaslev/vue-google-map",
   "description": "Google map for use with vue",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "private": false,
   "main": "dist/index.js",
